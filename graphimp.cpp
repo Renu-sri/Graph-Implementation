@@ -9,8 +9,7 @@ void prints(vector<int> vec[],int n)
 for(int i=0;i<n;i++)
 {
 cout<<i;
-        for (auto x : vec[i]) 
-           cout << "-> " << x; 
+        for (auto x : vec[i])  
         printf("\n");
 }
 }
@@ -23,7 +22,6 @@ for(itr=vec[v].begin();itr!=vec[v].end();itr++)
 {
 if(!visit[*itr])
 dfsvisit(visit,*itr,vec);
-
 }
 }
 void dfs(int v,int n,vector<int> vec[])
@@ -37,14 +35,12 @@ for (int i = 0; i < n; i++)
 }
 void bfsprint(bool *visit,int v,int n,vector<int> vec[])
 {
-//queue<int> que;
 vector<int>::iterator itr;
 list<int> que;
 que.push_back(v);
 visit[v]=true;
 while(que.empty()==true)
 {
-
 v=que.front();
 cout<<v<<" ";
 que.pop_front();
